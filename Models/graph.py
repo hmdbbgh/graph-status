@@ -53,14 +53,14 @@ class Graph:
         )[0]
 
         visited.append(VMN)
-        
+
         queue.append(VMN)
 
         while queue:
 
             start = queue.pop(0)
 
-            print(start)
+            print(start, end = ' ')
 
             neighbours = self.get_neighbors(start)
             
