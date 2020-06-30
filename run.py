@@ -64,12 +64,12 @@ def main():
 
         graph.connect(parent, tuple(children))
 
-    print("connected" if graph.is_connected() else "sorry")
+    print("\nConnected Graph!" if graph.is_connected() else "\nUnconnected Graph!")
 
     # Draw graph
     drawgraph = DrawGraph(graph)
-    drawgraph.draw()
 
+    drawgraph.draw()
 
 
 # Tell python to run main method
