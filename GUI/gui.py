@@ -70,9 +70,9 @@ class DrawGraph:
 
         for edge in self.edges:
             
-            self.Xe+=[self.position[edge[0]][0],self.position[edge[1]][0], None]
+            self.Xe += [self.position[edge[0]][0], self.position[edge[1]][0], None]
 
-            self.Ye+=[2*self.M-self.position[edge[0]][1],2*self.M-self.position[edge[1]][1], None]
+            self.Ye += [2 * self.M-self.position[edge[0]][1], 2 * self.M-self.position[edge[1]][1], None]
 
 
     def make_annotations(self, font_size=10, font_color='rgb(250,250,250)'):
@@ -112,7 +112,7 @@ class DrawGraph:
 
         fig = go.Figure()
 
-        fig.add_trace(                                 # add lines between nodes
+        fig.add_trace(                                 # add edges between vertices
 
                 go.Scatter(
 
@@ -128,7 +128,7 @@ class DrawGraph:
                     )
             )
 
-        fig.add_trace(                                  # add texts for nodes
+        fig.add_trace(                                  # add texts for vertices
 
                 go.Scatter(
 
