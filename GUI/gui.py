@@ -57,7 +57,7 @@ class DrawGraph:
 
             self.edges += [(vertice, neighbor) for neighbor in self.graph.get_neighbors(vertice)]
 
-        print(self.edges)
+        print('Edges: {}'.format(self.edges))
 
         self.determine_edges_position()
 
