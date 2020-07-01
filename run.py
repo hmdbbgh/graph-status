@@ -4,20 +4,11 @@ from Models.graph import Graph
 
 from GUI.gui import DrawGraph
 
-
-# function to check if values are binary matrix or not 
-def is_valid_values(values):
-    
-    for value in values:
-
-        if int(value) not in [0, 1] : return False
-
-    return True
+from Painless.validations import is_valid_values
 
 
 # Main function
 def main():
-
 
     try:
 
@@ -31,20 +22,9 @@ def main():
 
                 input_tmp = list(input('{}. '.format(num + 1)).lower().split(" "))
 
-                while '' in input_tmp: input_tmp.remove('')
+                while '' in values: values.remove('')
                 
-                if not is_valid_values(input_tmp): raise ValueError
-
-                if len(input_tmp) > num_of_vertics:
-                    
-                    sys.exit("The number of vertics can't be more than {}".format(num_of_vertics))
-
-                if input_tmp.count('1') >= num_of_vertics:
-
-                    sys.exit("The number of connected vertics can't be equal or more than {}".format(num_of_vertics))
-
-
-                matrix.append(tuple(input_tmp))
+                if is_valid_values(input_tmp, num_of_vertics): matrix.append(tuple(input_tmp))
 
         except (ValueError, NameError, SyntaxError):          # raise error message if matrix rows values are not binary and exit
             
