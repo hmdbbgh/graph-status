@@ -34,38 +34,49 @@ Step 1.
 ~~~~~~~
 Install Virtual Envitoment (venv):
 
-:: pip install virtualenv
+.. code-block:: bash
+
+   pip install virtualenv
 
 Step 2.
 ~~~~~~~
 Create a Virtual Envitoment:
 
-:: virtualenv venv
+.. code-block:: bash
+
+   virtualenv venv
 
 Step 3.
 ~~~~~~~
 Activate your Virtual Envitoment:
 
     For Linux:
+        
+        .. code-block:: bash
 
-        :: source venv/bin/activate
+            source venv/bin/activate
 
-    For Windows;
+    For Windows:
+    
+        .. code-block:: bash
 
-        :: venv\Scripts\activate.bat
+            venv\Scripts\activate.bat
 
 Step 4.
 ~~~~~~~
 Install required packages from requirements.txt:
 
-:: pip install -r requirements.txt
+.. code-block:: bash
+
+    pip install -r requirements.txt
 
 Step 5.
 ~~~~~~~
 Run the program:
 
-:: python run.py
+.. code-block:: bash
 
+    python run.py
 
 Examples
 --------
