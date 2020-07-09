@@ -32,7 +32,7 @@ Instruction
 
 Step 1.
 ~~~~~~~
-Install Virtual Envitoment (venv):
+**Install Virtual Envitoment (venv):**
 
 .. code-block:: bash
 
@@ -40,7 +40,7 @@ Install Virtual Envitoment (venv):
 
 Step 2.
 ~~~~~~~
-Create a Virtual Envitoment:
+**Create a Virtual Envitoment:**
 
 .. code-block:: bash
 
@@ -48,7 +48,7 @@ Create a Virtual Envitoment:
 
 Step 3.
 ~~~~~~~
-Activate your Virtual Envitoment:
+**Activate your Virtual Envitoment:**
 
     For Linux:
         
@@ -64,7 +64,7 @@ Activate your Virtual Envitoment:
 
 Step 4.
 ~~~~~~~
-Install required packages from requirements.txt:
+**Install required packages from requirements.txt:**
 
 .. code-block:: bash
 
@@ -72,7 +72,7 @@ Install required packages from requirements.txt:
 
 Step 5.
 ~~~~~~~
-Run the program:
+**Run the program:**
 
 .. code-block:: bash
 
