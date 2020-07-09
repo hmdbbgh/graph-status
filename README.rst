@@ -4,6 +4,7 @@ Semi Connected Graph Status Check
 
 Contents:
 
+.. contents:: :local:
 
 Introduction
 ------------
