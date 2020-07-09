@@ -85,3 +85,7 @@ Step 5.
 
 Examples
 --------
+
+.. image:: https://github.com/hmdbbgh/graph-status/blob/master/Media/Examples/1.png
+
+.. image:: https://github.com/hmdbbgh/graph-status/blob/master/Media/Examples/2.png
