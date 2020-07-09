@@ -142,8 +142,6 @@ class DrawGraph:
                     )
             )
         
-        hovertemplate = ["in: {}<br />out: {}".format(self.get_input_vertices(vertext), self.get_output_vertices(vertext)) for vertext in range(self.graph.get_num_of_vertices())]
-
         fig.add_trace(                                  # add texts for vertices
 
                 go.Scatter(
@@ -171,7 +169,7 @@ class DrawGraph:
 
                         hoverinfo = 'text',
 
-                        hovertemplate= hovertemplate,
+                        hovertemplate= ["in: {}<br />out: {}".format(self.get_input_vertices(vertext), self.get_output_vertices(vertext)) for vertext in range(self.graph.get_num_of_vertices())],
 
                         opacity = 0.8
                     )
