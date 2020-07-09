@@ -44,7 +44,7 @@ def main():
 
         graph.connect(parent, tuple(children))
 
-    print("\nSemi-connected Graph!" if graph.is_connected() else "\nNot semi-connected Graph!")
+    print("\nSemi-connected Graph!" if graph.is_semi_connected() else "\nNot semi-connected Graph!")
 
     # Draw graph
     drawgraph = DrawGraph(graph)

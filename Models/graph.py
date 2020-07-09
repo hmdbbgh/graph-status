@@ -33,34 +33,39 @@ class Graph:
 
 
     # Check if a directed graph is connected or not?
-    def is_connected(self):
+    def is_semi_connected(self):
 
-        return True if self.bfs() else False
+        matrix = [[False]*self.get_num_of_vertices() for v in range(self.get_num_of_vertices())]
+
+        for vertex in range(self.get_num_of_vertices()):
+
+            matrix[vertex][vertex] = True
+
+            distance = self.bfs(vertex)
+            
+            for key in distance.keys():
+
+                    if distance[key] != -1:
+
+                        matrix[vertex][key], matrix[key][vertex] = True, True
+
+        return False if list(filter(lambda row: False in row, matrix)) else True    #retun True if graph is semi-connected otherwise False
 
 
     # Breadth-first search (BFS)
-    def bfs(self):
+    def bfs(self, start_vertex):
 
         visited, queue = list(), list() # List to keep track of visited and queue nodes
 
-        VMN = sorted(                                # The vertice with most neighbors
-            
-            self.graph_dict.keys(),
+        distance = {i:0 for i in range(self.get_num_of_vertices())}
 
-            key=lambda x:len(self.graph_dict[x]),
+        visited.append(start_vertex)
 
-            reverse = True
-        )[0]
-
-        visited.append(VMN)
-
-        queue.append(VMN)
+        queue.append(start_vertex)
 
         while queue:
 
             start = queue.pop(0)
-
-            print(start, end = ' ')
 
             neighbours = self.get_neighbors(start)
             
@@ -68,10 +73,16 @@ class Graph:
 
                 if neighbour not in visited:
 
+                    distance[neighbour] = distance[start] + 1
+
                     visited.append(neighbour)
 
                     queue.append(neighbour)
 
-            if set(visited) == set(self.get_vertices()): return True
+        for vertex in distance.keys():
 
-        return False
+            if vertex not in visited:
+
+                distance[vertex] = -1
+
+        return distance
