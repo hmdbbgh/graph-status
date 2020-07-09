@@ -14,7 +14,7 @@ a directed graph is semi connected or not.
 
 *Definition:*
 
-A directed graph is semi connected if for all pairs of vertices i,j 
+A directed graph is semi connected if for all pairs of vertices i, j 
 there is  either a path from i to j or a path from j to i.
 
 Algorithm
