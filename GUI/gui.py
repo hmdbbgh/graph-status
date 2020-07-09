@@ -108,6 +108,20 @@ class DrawGraph:
         return annotations
 
 
+    def get_input_vertices(self, vertex):
+
+        inputs = list(filter(lambda v: v[1] == vertex, self.edges))
+
+        return ' '.join(map(lambda x: str(x[0]), inputs)).replace(" ",", ")
+
+
+    def get_output_vertices(self, vertex):
+
+        outputs = list(filter(lambda v: v[0] == vertex, self.edges))
+
+        return ' '.join(map(lambda x: str(x[1]), outputs)).replace(" ",", ") 
+
+
     def draw(self):
 
         fig = go.Figure()
@@ -127,6 +141,8 @@ class DrawGraph:
                         hoverinfo = 'none'
                     )
             )
+        
+        hovertemplate = ["in: {}<br />out: {}".format(self.get_input_vertices(vertext), self.get_output_vertices(vertext)) for vertext in range(self.graph.get_num_of_vertices())]
 
         fig.add_trace(                                  # add texts for vertices
 
@@ -154,6 +170,8 @@ class DrawGraph:
                         text = self.vertics_label,
 
                         hoverinfo = 'text',
+
+                        hovertemplate= hovertemplate,
 
                         opacity = 0.8
                     )
