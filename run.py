@@ -17,12 +17,12 @@ def main():
         try:
 
             matrix = list()
-
+           
             for num in range(num_of_vertics):
 
                 input_tmp = list(input('{}. '.format(num + 1)).lower().split(" "))
 
-                while '' in values: values.remove('')
+                while '' in input_tmp: input_tmp.remove('')
                 
                 if is_valid_values(input_tmp, num_of_vertics): matrix.append(tuple(input_tmp))
 
@@ -44,7 +44,7 @@ def main():
 
         graph.connect(parent, tuple(children))
 
-    print("\nConnected Graph!" if graph.is_connected() else "\nUnconnected Graph!")
+    print("\nSemi-connected Graph!" if graph.is_connected() else "\nNot semi-connected Graph!")
 
     # Draw graph
     drawgraph = DrawGraph(graph)
