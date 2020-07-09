@@ -85,4 +85,4 @@ class Graph:
 
                 distance[vertex] = -1
 
-        return distance
+        return distance     #the distance between start_vertex and other vertices
