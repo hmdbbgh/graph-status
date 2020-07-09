@@ -2,7 +2,7 @@
 Semi Connected Graph Status Check
 ==================================
 
-Contents:
+**Contents:**
 
 .. contents:: :local:
 
@@ -32,7 +32,7 @@ Instruction
 
 Step 1.
 ~~~~~~~
-**Install Virtual Envitoment (venv):**
+**Install Virtual Environment (venv):**
 
 .. code-block:: bash
 
@@ -40,7 +40,7 @@ Step 1.
 
 Step 2.
 ~~~~~~~
-**Create a Virtual Envitoment:**
+**Create a Virtual Environment:**
 
 .. code-block:: bash
 
@@ -48,7 +48,7 @@ Step 2.
 
 Step 3.
 ~~~~~~~
-**Activate your Virtual Envitoment:**
+**Activate your Virtual Environment:**
 
     For Linux:
         
