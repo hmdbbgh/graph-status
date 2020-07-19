@@ -21,16 +21,18 @@ Algorithm
 ---------
 
 We want to detremine if our directed graph is semi connected or not.
-Therefore, first we create a n*n matrix which its initial values on the
-main diagonal are 'True' and the rest are 'False'.
+
+Therefore, first we create a n*n matrix which its initial values on 
+the main diagonal are 'True' and the rest are 'False'.
+
 Then we perform Breadth-first search on each of vertices to detremine the
 path distance of each vertex from another and if no path have been found,
 then we set the distance '-1'. Thus if the distance between two vertices
 isn't '-1' then matrix elements of the two vertices will be set 'True'.
+
 Finally when Breadth-first search is performed, if none of the
 matrix elements wouldn't be 'False' then we can conclude that our graph is
 semi connected.
-
 
 Instruction
 -----------
