@@ -21,7 +21,7 @@ plotly==4.8.2
 prompt-toolkit==3.0.5
 ptyprocess==0.6.0
 pydot==1.4.1
-Pygments==2.6.1
+Pygments==2.7.4
 pylint==2.5.3
 pyparsing==2.4.7
 python-dateutil==2.8.1
